@@ -1,0 +1,42 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+body{
+    background: linear-gradient(45deg,rgb(255, 219, 225),rgb(255, 219, 255));
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.container img{width: 700px;}
+.bi-suit-heart-fill {
+    color: #ffcdf0;
+    font-size: 85px;
+    position: absolute;
+    animation:  heartMove linear 1;
+    top: -10vh;
+    z-index: 0;
+}
+.date{position: fixed; right: 25px;bottom:10px;color: #ff83da;}
+@keyframes heartMove {
+    0%{
+        transform: translateY(-10vh) ;
+    }
+    100%{
+        transform: translateY(110vh) ;
+    }
+}
+
+@media (max-width: 991px) {
+    .bi-suit-heart-fill {font-size: 35px;}
+    .container img{width: 100%;}
+}
